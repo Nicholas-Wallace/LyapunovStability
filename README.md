@@ -1,5 +1,7 @@
 # LyapunovStability.jl
 
+[![CI](https://github.com/Nicholas-Wallace/LyapunovStability.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/Nicholas-Wallace/LyapunovStability.jl/actions/workflows/CI.yml?query=branch%3Amain)
+
 Lyapunov Stability analysis toolbox for Julia  
 
 `LyapunovStability.jl` provides tools to verify stability using Lyapunov functions. Using the set-invariance-based approach the type of sets that we use in this library are Hyperpolyhedral ones. 
@@ -11,7 +13,7 @@ To install LyapunovStability.jl, use Julia Package Manager:
 
 ```julia
 julia> ]
-pkg> add OptimalControl
+pkg> add LyapunovStability
 ```
 ## Basic Usage
 
@@ -51,11 +53,11 @@ ip = is_pinvariant(sys, X; U=U) # verify the invariance of X
 ```
 
 ## Documentation
-For more information about the package usage check the [stable-documentation].
+Documentation is available through the package docstrings, for example `?is_pinvariant` in the Julia REPL.
 
 ## Relationship with Other Packages
 
-`Polyhedron.jl` relies on [JuMP](https://jump.dev/) for optimization modeling, [NEOSServer.jl](https://github.com/odow/NEOSServer.jl) to access the NEOS Server (Knitro), and [Polyhedra.jl](https://github.com/JuliaPolyhedra/Polyhedra.jl) with [CDDLib.jl](https://github.com/JuliaPolyhedra/CDDLib.jl) for polyhedral representation and computation; [Plots.jl](https://docs.juliaplots.org/) is used for visualization. In the future, we aim to integrate the package with other control toolboxes, such as ControlSystems.jl, to support model import/export and interoperability with established control-design workflows.
+`LyapunovStability.jl` relies on [JuMP](https://jump.dev/) for optimization modeling, [NEOSServer.jl](https://github.com/odow/NEOSServer.jl) to access the NEOS Server (Knitro), and [Polyhedra.jl](https://github.com/JuliaPolyhedra/Polyhedra.jl) with [CDDLib.jl](https://github.com/JuliaPolyhedra/CDDLib.jl) for polyhedral representation and computation; [Plots.jl](https://docs.juliaplots.org/) is used for visualization. In the future, we aim to integrate the package with other control toolboxes, such as ControlSystems.jl, to support model import/export and interoperability with established control-design workflows.
 
 ## Contributing
 
