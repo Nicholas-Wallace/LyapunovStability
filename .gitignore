@@ -1,4 +1,5 @@
 Manifest.toml
+docs/build/
 .ai-jail
 .DS_Store
 */.DS_Store
